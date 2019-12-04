@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>I am in the AppComponent</h3>
+            <hr>
+            <!--
+            <label>Username</label>
+            <input type="text" 
+                    class="form-control"
+                    [(ngModel)]="username" >
+            <p>{{ userName }}</p>
+            <button class="btn btn-primary" 
+                    [disabled]="username === ''" 
+                    (click)="onResetUsername()">Reset User</button>
+                    -->
+                   <!-- <app-servers></app-servers>-->
+                 <button class="btn btn-primary" (click)='onToggleDetails()'>Display Details</button>
+                 <p *ngIf="isDisplayedDetails === true">Secret Santa is here!</p>
+                 <div *ngFor="let logItem of log; let i = index" 
+                    [ngStyle]="{'background-color': i>=4 ? 'blue' : 'transparent'}"
+                    [ngClass]="{'white-text': i>=4}">
+                     <p>{{logItem}}</p>
+                 </div>
+        </div>
+    </div>
+</div>
